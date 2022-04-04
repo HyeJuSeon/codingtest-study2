@@ -2,9 +2,13 @@
 
 ## 풀이 목록
 
-|  #  |   날짜   | 문제이름 | 링크 | 풀이 | 완료 |  Best  |
-| :-: | :------: | :-----: | :--: | :--: | :--: | :----: |
-|  1  | 22-03-29 | 다단계 칫솔 판매 | [문제](https://programmers.co.kr/learn/courses/30/lessons/77486) | []() | ❌ | |
+|  #  |   날짜   | 난이도 | 문제이름 | 링크 | 풀이 | 완료 |  Best  |
+| :-: | :------: | :---: | :-----: | :--: | :--: | :--: | :----: |
+|  1  | 22-04-07 | Silver II | 마인크래프트 | [문제](https://www.acmicpc.net/problem/18111) | []() | ❌ | |
+|  2  | 22-04-07 | Silver III | 스택 수열 | [문제](https://www.acmicpc.net/problem/1874) | []() | ❌ | |
+|  3  | 22-04-07 | Silver I | 경로 찾기 | [문제](https://www.acmicpc.net/problem/11403) | []() | ❌ | |
+|  4  | 22-04-07 | Gold V | AC | [문제](https://www.acmicpc.net/problem/5430) | []() | ❌ | |
+|  5  | 22-04-07 | Gold IV | DSLR | [문제](https://www.acmicpc.net/problem/9019) | []() | ❌ | |
 
 ## Tips
 
