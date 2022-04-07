@@ -3,76 +3,54 @@
 ## 코드
 
 ```
+#시간초과 
 import sys
+from collections import Counter
 
-n = int(sys.stdin.readline())
+N, M, B = map(int,sys.stdin.readline().strip().split())
 
-stack = []
-result = []
+flatten = []
 
-#불가능한 경우 False
+for i in range(N):
+    flatten += (list(map(int,sys.stdin.readline().strip().split())))
+
+h_lst = set(flatten)
+
+result_h = 0
+time_list = []
 temp = True
 
-count = 1
-for i in range(n):
-    num = int(sys.stdin.readline())
+for h in h_lst:
+    inven = B
+    time = 0
 
-    while count <= num:
-        stack.append(count)
-        result.append('+')
-        count+=1
+    for spot,count in Counter(flatten).items():
+        if spot == h:
+            pass
+        elif spot < h:
+            block = (h-spot)*count
+            if inven >= block:
+                time += block
+                inven -= block
+            else:
+                continue
+
+        elif spot > h:
+            block = (spot-h)*count
+            time += block * 2
+            inven += block
     
-    if stack[-1] == num:
-        stack.pop()
-        result.append('-')
+    time_list.append(time)
+    min_time = min(time_list)
+
+    if min_time >= time:
+        result_h = h
+        min_time = time
     else:
-        temp = False
+        continue
 
-if temp == False:
-    print('NO')
-else:
-    for i in result:
-        print(i)
+sys.stdout.write(min_time, result_h)
 
-
-#삽질
-'''import sys
-from collections import deque
-
-n = int(sys.stdin.readline())
-
-dq = deque()
-target = deque()
-result = []
-
-for i in range(n):
-    target.append(int(sys.stdin.readline().strip()))
-
-num = 1
-while True:
-    if num > n:
-        break
-
-    elif num <= target[0]:
-        dq.append(num)
-        result.append('+')
-        num += 1
-
-    elif dq[-1] == target[0]:
-        dq.pop()
-        target.popleft()
-        result.append('-')
-
-while dq:
-    if dq.pop() != target.popleft():
-        result = ['NO']
-        break
-    else:
-        result.append('-')
-
-for i in result:
-    print(i)
-  '''        
 ```
 
 
