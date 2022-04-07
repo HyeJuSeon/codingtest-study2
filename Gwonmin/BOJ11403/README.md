@@ -26,37 +26,5 @@ for row in graph:
 
 
 
-#삽질
-'''
-n = int(sys.stdin.readline())
-graph = {}
 
-#그래프 만들기
-for key in range(1,n+1):
-    line = list(map(int,sys.stdin.readline().strip().split()))
-    value = []
-    for idx, val in enumerate(line):
-        if val:
-            value.append(idx+1)
-    graph[key] = value
-
-print(graph)
-
-result = []
-
-def check(keys,graph):
-    passed = []
-    for key in keys:
-        if len(graph[key]) != 0:
-            passed += graph[key]
-            check(i,graph)
-    return passed
-
-for i in range(1,n+1):
-    node = [i]
-    result.append(check(node,graph))
-
-
-
-'''
 ```
