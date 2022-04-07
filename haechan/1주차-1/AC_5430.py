@@ -29,6 +29,6 @@ T = int(input())
 for _ in range(T):
     p = input()
     n = int(input())
-    arr = ast.literal_eval(input())
+    arr = ast.literal_eval(input()) # 문자열 형태의 리스트를 리스트 타입으로 변경
 
     print(result_func(p, arr))
