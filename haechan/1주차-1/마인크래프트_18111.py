@@ -39,5 +39,5 @@ for target_h in range(max_h, min_h-1, -1):
     if inventory >= needed_block: # 인벤토리에 있는 블록 수가 필요한 블록 수보다 같거나 크다면 가능
         result.append((spend_time, target_h))
         
-result.sort(key=lambda x: (x[0], -x[1]))
+result.sort(key=lambda x: (x[0], -x[1])) # 최소 시간이면서 땅의 높이가 높은 순으로 정렬
 print(result[0][0], result[0][1])
