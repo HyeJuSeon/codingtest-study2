@@ -8,7 +8,7 @@ flatten = []
 for i in range(N):
     flatten += (list(map(int,sys.stdin.readline().strip().split())))
 
-h_lst = set(flatten)
+h_lst = range(min(flatten),max(flatten)+1)
 
 result_h = 0
 time_list = []
@@ -18,6 +18,7 @@ for h in h_lst:
     inven = B
     time = 0
 
+    #여기가 문제임
     for spot,count in Counter(flatten).items():
         if spot == h:
             pass
@@ -43,5 +44,5 @@ for h in h_lst:
     else:
         continue
 
-sys.stdout.write(min_time, result_h)
+print(min_time, result_h)
 
