@@ -36,5 +36,3 @@ def solution(n, left, right):
         answer.append(max_num)
     return answer
 
-
-print(solution(3,2,5))
