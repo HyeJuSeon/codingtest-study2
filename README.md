@@ -2,17 +2,43 @@
 
 ## 풀이 목록
 
-|  #  |   날짜   | 난이도 | 문제이름 | 링크 | 풀이 | 완료 |  Best  |
-| :-: | :------: | :---: | :-----: | :--: | :--: | :--: | :----: |
-|  1  | 22-04-07 | Silver II | 마인크래프트 | [문제](https://www.acmicpc.net/problem/18111) | []() | ❌ | |
-|  2  | 22-04-07 | Silver III | 스택 수열 | [문제](https://www.acmicpc.net/problem/1874) | []() | ❌ | |
-|  3  | 22-04-07 | Silver I | 경로 찾기 | [문제](https://www.acmicpc.net/problem/11403) | []() | ❌ | |
-|  4  | 22-04-07 | Gold V | AC | [문제](https://www.acmicpc.net/problem/5430) | []() | ❌ | |
-|  5  | 22-04-07 | Gold IV | DSLR | [문제](https://www.acmicpc.net/problem/9019) | []() | ❌ | |
+|  #  |   날짜   |   난이도   |          문제이름          |                               링크                               |                                                                              풀이                                                                               | 완료 |  Best  |
+| :-: | :------: | :--------: | :------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--: | :----: |
+|  1  | 22-04-07 | Silver II  |        마인크래프트        |          [문제](https://www.acmicpc.net/problem/18111)           | [마인크래프트.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/4%EC%9B%947%EC%9D%BC/%EB%A7%88%EC%9D%B8%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8.py) |  ✔   | 이호산 |
+|  2  | 22-04-07 | Silver III |         스택 수열          |           [문제](https://www.acmicpc.net/problem/1874)           |     [스택수열\_1874.py](https://github.com/kimeunh3/codingtest-study2/blob/main/haechan/1%EC%A3%BC%EC%B0%A8-1/%EC%8A%A4%ED%83%9D%EC%88%98%EC%97%B4_1874.py)     |  ✔   | 양해찬 |
+|  3  | 22-04-07 |  Silver I  |         경로 찾기          |          [문제](https://www.acmicpc.net/problem/11403)           |          [BOJ*11403*경로\_찾기](https://github.com/kimeunh3/codingtest-study2/tree/main/Eunhye/DAY01/BOJ_11403_%EA%B2%BD%EB%A1%9C_%EC%B0%BE%EA%B8%B0)           |  ✔   | 김은혜 |
+|  4  | 22-04-07 |   Gold V   |             AC             |           [문제](https://www.acmicpc.net/problem/5430)           |                                [AC.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/4%EC%9B%947%EC%9D%BC/AC.py)                                |  ✔   | 이호산 |
+|  5  | 22-04-07 |  Gold IV   |            DSLR            |           [문제](https://www.acmicpc.net/problem/9019)           |                   [백준 9019](https://github.com/kimeunh3/codingtest-study2/tree/main/SeoYoung/%EB%B0%B1%EC%A4%80/%EB%B0%B1%EC%A4%80%209019)                    |  ✔   | 배서영 |
+|  6  | 22-04-11 |  Level 2   | K진수에서 소수 개수 구하기 | [문제](https://programmers.co.kr/learn/courses/30/lessons/92335) |                                                                                                                                                                 |      |        |
+|  7  | 22-04-11 |  Level 2   |      n^2 배열 자르기       | [문제](https://programmers.co.kr/learn/courses/30/lessons/87390) |                                                                                                                                                                 |      |        |
+|  8  | 22-04-11 |  Level 2   |       주차요금 계산        | [문제](https://programmers.co.kr/learn/courses/30/lessons/92341) |                                                                                                                                                                 |      |        |
+|  9  | 22-04-11 |  Level 3   |      디스크 컨트롤러       | [문제](https://programmers.co.kr/learn/courses/30/lessons/42627) |                                                                                                                                                                 |      |        |
+| 10  | 22-04-11 |  Level 3   |         정수삼각형         | [문제](https://programmers.co.kr/learn/courses/30/lessons/43105) |                                                                                                                                                                 |      |        |
 
 ## Tips
 
+- [**플로이드 와샬 (Floyd Warshall) 알고리즘**](https://blog.naver.com/ndb796/221234427842)
+
+  - i에서 k를 거쳐 j로 갈 때 i에서 j까지의 최단거리를 업데이트 해주는 방식
+
+  ```python
+  # adj는 인접행렬
+  for k in range(N): # k는 거쳐가는 노드
+    for i in range(N): # i는 출발 노드
+      for j in range(N): # j는 도착 노드
+        if adj[i][k] + adj[k][j] < adj[i][j]:
+          adj[i][j] = adj[i][k] + adj[k][j]
+  ```
+
+- **mod(%) 활용 법**
+
+  ```python
+  # 수의 범위가 0 ~ 9999 일 때 음수 처리 방법
+  num = -2 % 10000 # 9998
+  ```
+
 - **2차원 배열 debugging 법**
+
   ```python
   arr = [[1, 2, 3, 4, 5],
         [1, 2, 3, 4, 5],
