@@ -10,5 +10,4 @@ def floyd():
                     G[i][j] = 1
 floyd()
 for i in range(N):
-    for j in range(N):
-        print(G[i][j])
+    print(*G[i], sep=' ')

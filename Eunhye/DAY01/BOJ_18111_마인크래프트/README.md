@@ -1,5 +1,27 @@
 ## 풀이
 
+완전탐색으로 풀어주었습니다.
+
+우선, field는 2차원 배열로 주어지지만 딱히 좌표가 필요한게 아니므로 1차원 배열로 받아주어도 무관합니다.  
+그 다음 가장 큰 높이를 가지는 순서대로 정렬해줍니다.
+
+field가 가지는 가장 높은 높이부터 0까지 높이를 지정해준 뒤(height),
+
+height보다 높거나 같을 때는:
+
+- 해당 블럭 차이(field\[idx]-height)에 2를 곱한 값만큼 시간을 더해주고,
+- 제거한 블럭(field\[idx]-height)을 인벤토리에 넣어줍니다.
+- 이미 현재 시간이 구해준 시간보다 크다면 break
+
+height보다 낮을 때는:
+
+- 제거할 블럭(height-field\[idx])이 가지고 있는 블럭보다 적으면 break
+- 해당 블럭 차이(height-field\[idx])만큼 시간을 더해주고,
+- 설치한 블럭(height-field\[idx])을 인벤토리에서 제외해줍니다.
+- 이미 현재 시간이 구해준 시간보다 크다면 break
+
+break를 통하지 않고 while문을 나와주었을 때만 값을 비교해 더 적은 값으로 저장해줍니다.
+
 ## 코드
 
 ```python
@@ -16,28 +38,23 @@ result = []
 for height in range(field[0], -1, -1):
   idx = 0
   time = 0
-  flag = 0
   blocks = B
-  while idx < len(field) and height <= field[idx]:
-    time += 2*(field[idx]-height)
-    blocks += field[idx]-height
-    idx += 1
-    if result and time > result[0]:
-      flag=1
-      break
-
-  while idx < len(field) and height > field[idx]:
-    if blocks < height-field[idx]:
-      flag = 1
-      break
-    time += height-field[idx]
-    blocks -= height-field[idx]
-    idx += 1
-    if result and time > result[0]:
-      flag=1
-      break
-
-  if not flag:
+  while idx < len(field):
+    if height <= field[idx]:
+      time += 2*(field[idx]-height)
+      blocks += field[idx]-height
+      idx += 1
+      if result and time > result[0]:
+        break
+    else:
+      if blocks < height-field[idx]:
+        break
+      time += height-field[idx]
+      blocks -= height-field[idx]
+      idx += 1
+      if result and time > result[0]:
+        break
+  else:
     result = [time, height] if not result or (result and time < result[0]) else result
 
 print(*result, sep=" ")
