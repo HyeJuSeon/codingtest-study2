@@ -2,54 +2,46 @@
 
 ## 코드
 
-```import sys
+```from collections import defaultdict
+import math
 
-N = int(sys.stdin.readline())
-graph = []
+#math.ceil => 올림
+#math.floor => 버림
+def solution(fees, records):
+    answer = []
+    car_time_dict = defaultdict(int)
+    idx_list = [] #이미 계산한 차량 체크
+    for i in range(len(records)-1):
+        for j in range(i+1,len(records)):
+            if i not in idx_list and j not in idx_list:
+                in_time, in_car, _ = records[i].split()
+                out_time, out_car, _ = records[j].split()
+                in_hour, in_minute = map(int,in_time.split(":"))
+                out_hour, out_minute = map(int,out_time.split(":"))
+                if in_car == out_car:
+                    passed_time = ((out_hour-in_hour)*60 + out_minute-in_minute) if out_minute >= in_minute else ((out_hour-1-in_hour)*60 + 60-(in_minute-out_minute))
+                    car_time_dict[in_car] += passed_time
+                    idx_list.append(i)
+                    idx_list.append(j)
+                    break
+                else:
+                    continue
+            else:
+                continue
+                
+    for i in range(len(records)):
+        if i not in idx_list:
+            time, car, _ = records[i].split()
+            hour,minute = map(int,time.split(':'))
+            car_time_dict[car] += (23-hour)*60 + 59-minute
 
-# 플로이드 와샬 알고리즘은 모든 정점에 대한 경로를 계산하는 알고리즘이다.
-# 플로이드 와샬 알고리즘을 사용하여 어느 한 곳에 들려 다른 곳으로 가는 길이 존재한다면 그 값을 체킹해준다.
-# 그리고 그 그래프를 출력하면 된다.
-
-for _ in range(N):
-    graph.append(list(map(int,sys.stdin.readline().split())))
-
-for k in range(N):
-    for i in range(N):
-        for j in range(N):
-            if graph[i][k] and graph[k][j]:
-                graph[i][j]=1
-
-for row in graph:
-    out = " ".join(list(map(str,row)))
-    print(out)
-
-
-#삽질
-'''
-n = int(sys.stdin.readline())
-graph = {}
-#그래프 만들기
-for key in range(1,n+1):
-    line = list(map(int,sys.stdin.readline().strip().split()))
-    value = []
-    for idx, val in enumerate(line):
-        if val:
-            value.append(idx+1)
-    graph[key] = value
-print(graph)
-result = []
-def check(keys,graph):
-    passed = []
-    for key in keys:
-        if len(graph[key]) != 0:
-            passed += graph[key]
-            check(i,graph)
-    return passed
-for i in range(1,n+1):
-    node = [i]
-    result.append(check(node,graph))
-'''
+    for car, time in sorted(car_time_dict.items(), key = lambda x : x[0]):
+        if time <= fees[0]:
+            answer.append(fees[1])
+        else:
+            answer.append(fees[1]+(math.ceil((time-fees[0])/fees[2])*fees[3]))
+    
+    return answer
 ```
 
 
