@@ -1,5 +1,5 @@
 ## 풀이
-
+차량별 주차장 이용 시간을 {차량번호:시간}의 딕셔너리로 정리하고 조건에 맞게 요금을 계산하는 
 ## 코드
 
 ```from collections import defaultdict
