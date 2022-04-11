@@ -1,37 +1,28 @@
+import sys
+sys.setrecursionlimit(10**6)
 
+size = int(input())
 
+field = [["x" for _ in range(size)] for _ in range(size)]
 
+def star(size, flag, field, x, y) :
+    if size == 1 :
 
-
-row = int(input())
-col = int(input())
-queries = [[2,2,5,4],[3,3,6,6],[5,1,6,3]]
-
-def solution(rows, columns, queries):
-    answer = []
-    field = [[0 for i in range(rows)] for j in range(columns)]
-    count = 1
-    for i in range(columns) :
-        for j in range(rows) :
-            field[i][j] = count
-            count +=1
-
-    for i in range(len(queries)) :
-        tmp_result = 1000000000
-        xf = queries[i][0]
-        xt = queries[i][1]
-        yf = queries[i][2]
-        yt = queries[i][3]
-        flag = 0
-        for j in range(xf + 1, xt+ 1) :
-            tmp = field[yf][j - 1]
-            field[yf][j] = tmp
-            
-
-
-
-
-    return answer
-
-solution(row, col, queries)
-
+        if flag == True :
+            field[x][y] = "*"
+        else :
+            field[x][y] = " "
+    else :
+        count = 0
+        for i in range(x, size + x, int(size/3)) :
+            for j in range(y, size + y, int(size/3)) :
+                if count == 4 :
+                    star(int(size/3), False, field, i, j)
+                else :
+                    star(int(size/3), flag, field, i, j)
+                count += 1
+star(size, True, field, 0, 0)
+for i in range(len(field)) :
+    for j in range(len(field)) :
+        print(field[i][j], end = "")
+    print("")
