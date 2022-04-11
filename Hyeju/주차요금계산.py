@@ -1,8 +1,9 @@
 import math
+from collections import defaultdict
 def solution(fees, records):
     dt, df, ut, uf = fees
     in_car = {}
-    dic = {}
+    dic = defaultdict(int)
     for record in records:
         time, car, inout = record.split(' ')
         if inout == 'IN':
@@ -11,17 +12,11 @@ def solution(fees, records):
             h1, m1 = map(int, in_car.pop(car).split(':'))
             h2, m2 = map(int, time.split(':'))
             t = (h2 - h1) * 60 + m2 - m1
-            if car in dic:
-                dic[car] += t
-            else:
-                dic[car] = t
+            dic[car] += t
     for c in in_car:
         h, m = map(int, in_car[c].split(':'))
         t = (23 - h) * 60 + 59 - m
-        if c in dic:
-            dic[c] += t
-        else:
-            dic[c] = t
+        dic[c] += t
     dic = sorted(dic.items())
     ans = []
     for d in dic:
