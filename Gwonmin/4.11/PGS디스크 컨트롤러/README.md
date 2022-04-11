@@ -2,53 +2,74 @@
 
 ## 코드
 
-```import sys
+```import heapq
+import math
 
-N = int(sys.stdin.readline())
-graph = []
+def solution(jobs):
+    jobs = sorted(jobs, key= lambda x : x[0])
+    heap = []
+    start = -1
+    end = 0
+    temp = 0
+    answer = 0
 
-# 플로이드 와샬 알고리즘은 모든 정점에 대한 경로를 계산하는 알고리즘이다.
-# 플로이드 와샬 알고리즘을 사용하여 어느 한 곳에 들려 다른 곳으로 가는 길이 존재한다면 그 값을 체킹해준다.
-# 그리고 그 그래프를 출력하면 된다.
+    #작업 시작 시점부터 종료 시점 사이 작업만 힙에 넣고 최소힙을 찾아나가는 과정을 반복한다
 
-for _ in range(N):
-    graph.append(list(map(int,sys.stdin.readline().split())))
+    while len(jobs) > temp:
+        for job in jobs:
+            if start < job[0] <= end:
+                heapq.heappush(heap, (job[1],job))
+                # print(heap) => [(0,[0,3]),(1,[1,9]),... ] 
 
-for k in range(N):
-    for i in range(N):
-        for j in range(N):
-            if graph[i][k] and graph[k][j]:
-                graph[i][j]=1
+        if len(heap) != 0:
+            min_heap = heapq.heappop(heap)[1]
+            #print(min_heap) => [0,3]
 
-for row in graph:
-    out = " ".join(list(map(str,row)))
-    print(out)
+            temp+=1
+            start = end
+            end += min_heap[1]
+            answer += end - min_heap[0]
+        else:
+            end+=1
 
+    return math.floor(answer / len(jobs))
+    
+jobs = [[0, 3], [1, 9], [2, 6]]
+print(solution(jobs))
 
-#삽질
+        
+
+#요청부터 종료까지 걸리는 시간의 합의 평균이 작은 방법을 찾아야한다.
+#무지성 완전탐색
+#앞 작업이 끝나는 시점에 요청시간이 포함되는 경우 중 최소값을 찾는다
+#위와 같은 경우가 없으면 가장 요청시간이 이른 경우를 선택
+#위 값이 음수인 케이스만 제외하고 완전탐색
+from itertools import permutations
+
 '''
-n = int(sys.stdin.readline())
-graph = {}
-#그래프 만들기
-for key in range(1,n+1):
-    line = list(map(int,sys.stdin.readline().strip().split()))
-    value = []
-    for idx, val in enumerate(line):
-        if val:
-            value.append(idx+1)
-    graph[key] = value
-print(graph)
-result = []
-def check(keys,graph):
-    passed = []
-    for key in keys:
-        if len(graph[key]) != 0:
-            passed += graph[key]
-            check(i,graph)
-    return passed
-for i in range(1,n+1):
-    node = [i]
-    result.append(check(node,graph))
+def solution(jobs):
+    heap = []
+    answer = 0
+    for case in permutations(jobs):
+        tar_time = 0
+        front_fin_time = 0
+        temp = True
+        for job in case:
+            req_fin_time = job[0] - front_fin_time + job[1]
+            if req_fin_time < 0:
+                temp = False
+                break
+            else:
+                tar_time += req_fin_time
+                front_fin_time += job[1]
+            
+        if temp:
+            heapq.heappush(heap,tar_time)
+        
+    print(heapq.heappop(heap))
+        
+    return answer
+solution([[0, 3], [1, 9], [2, 6]])
 '''
 ```
 
