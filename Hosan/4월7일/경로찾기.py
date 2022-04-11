@@ -5,18 +5,15 @@ length = int(input())
 field = {}
 
 def dfs(i, j , field, visited) :
-
- if visited[i][j] == 1 :
-     return -1
- else :
     visited[i][j] = 1
     if j in field[i] :
         return 1
     else :
         for items in field[i] :
-            result = dfs(items, j, field, visited)
-            if result == 1 :
-                return 1
+            if visited[items][j] != 1 :
+                result = dfs(items, j, field, visited)
+                if result == 1 :
+                    return 1
     return 0
 
 
