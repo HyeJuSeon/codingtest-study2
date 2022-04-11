@@ -2,54 +2,62 @@
 
 ## 코드
 
-```import sys
+```from collections import deque
+import math
+# 0P0처럼 소수 양쪽에 0이 있는 경우
+# P0처럼 소수 오른쪽에만 0이 있고 왼쪽에는 아무것도 없는 경우
+# 0P처럼 소수 왼쪽에만 0이 있고 오른쪽에는 아무것도 없는 경우
+# P처럼 소수 양쪽에 아무것도 없는 경우
+# 단, P는 각 자릿수에 0을 포함하지 않는 소수입니다.
+# 예를 들어, 101은 P가 될 수 없습니다.
 
-N = int(sys.stdin.readline())
-graph = []
+#큐
+#정수 n의 k진수 변환
+#숫자 추가 삭제 편하게 문자열로 변환
+#소수 판별 함수 만들기
+#0을 만나면 스택에 들어온 숫자가 문제의 조건에 맞는지 판별
+#int() 함수 안에 빈 문자열이 들어가면 오류남 ex) ""
 
-# 플로이드 와샬 알고리즘은 모든 정점에 대한 경로를 계산하는 알고리즘이다.
-# 플로이드 와샬 알고리즘을 사용하여 어느 한 곳에 들려 다른 곳으로 가는 길이 존재한다면 그 값을 체킹해준다.
-# 그리고 그 그래프를 출력하면 된다.
+def solution(n, k):
+    answer = 0
 
-for _ in range(N):
-    graph.append(list(map(int,sys.stdin.readline().split())))
+    dq = deque()
+    while n >= k:
+        dq.appendleft(str(n%k))
+        n = n // k
+        if n < k:
+            dq.appendleft(str(n))
 
-for k in range(N):
-    for i in range(N):
-        for j in range(N):
-            if graph[i][k] and graph[k][j]:
-                graph[i][j]=1
+    #변환된 수    
+    num_str = ""
+    while len(dq) != 0:
+        if dq[0] != "0":
+            num_str += dq.popleft()
+        else:
+            dq.popleft()
+            if num_str == "":
+                continue
+            
+            num = int(num_str)
+            if check_prime(num):
+                answer += 1
+            num_str = ""
 
-for row in graph:
-    out = " ".join(list(map(str,row)))
-    print(out)
+    if num_str != "" and check_prime(int(num_str)):
+        answer += 1
 
+    
+    return answer
 
-#삽질
-'''
-n = int(sys.stdin.readline())
-graph = {}
-#그래프 만들기
-for key in range(1,n+1):
-    line = list(map(int,sys.stdin.readline().strip().split()))
-    value = []
-    for idx, val in enumerate(line):
-        if val:
-            value.append(idx+1)
-    graph[key] = value
-print(graph)
-result = []
-def check(keys,graph):
-    passed = []
-    for key in keys:
-        if len(graph[key]) != 0:
-            passed += graph[key]
-            check(i,graph)
-    return passed
-for i in range(1,n+1):
-    node = [i]
-    result.append(check(node,graph))
-'''
+def check_prime(num):
+    if num == 1:
+        return False
+
+    for i in range(2,int(math.sqrt(num))+1):
+        if num % i == 0:
+            return False
+
+    return True
 ```
 
 
