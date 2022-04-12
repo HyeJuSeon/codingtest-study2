@@ -15,11 +15,11 @@
 |  9  | 22-04-11 |  Level 3   |      디스크 컨트롤러       | [문제](https://programmers.co.kr/learn/courses/30/lessons/42627) | [디스크 컨트롤러/sol.py](https://github.com/kimeunh3/codingtest-study2/blob/main/SeoYoung/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EB%94%94%EC%8A%A4%ED%81%AC%20%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC/sol.py)                                                                                                                                                                | ✔ | 배서영 |
 | 10  | 22-04-11 |  Level 3   |         정수삼각형         | [문제](https://programmers.co.kr/learn/courses/30/lessons/43105) | [정수삼각형.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/4%EC%9B%9411%EC%9D%BC/%EC%A0%95%EC%88%98%EC%82%BC%EA%B0%81%ED%98%95.py)                                                                                                                                                               | ✔ | 이호산 |
 
-|  11  | 22-04-14 |  Gold V  |           연구소           |           [문제](https://www.acmicpc.net/problem/9019)           | [백준 9019] |  X   |  |
-|  12  | 22-04-14 |  Gold III   | 파일 합치기 | [문제](https://www.acmicpc.net/problem/11066) | [백준 11066]                                                                                                         | X |  |
-|  13  | 22-04-14 |  Silver 3  |      잃어버린 괄호       | [문제](https://www.acmicpc.net/problem/1541) | [백준 1541]                                                                     | X |  |
-|  14  | 22-04-14 |  Silver 2   |       연속합        | [문제](https://www.acmicpc.net/problem/1912) | [백준 1912]                                                                                                                                                               | X |  |
-|  15  | 22-04-14 | Silver 1   |      신입사원      | [문제](https://www.acmicpc.net/problem/1946) | [백준 1946]                                                                                                                                                                | X |  |
+|  11  | 22-04-14 |  Gold V  |           연구소           |           [문제](https://www.acmicpc.net/problem/9019)           | [백준 9019] |  ✔   |      |
+|  12  | 22-04-14 |  Gold III   | 파일 합치기 | [문제](https://www.acmicpc.net/problem/11066) | [백준 11066]                                                                                                         |  ✔ |  |
+|  13  | 22-04-14 |  Silver 3  |      잃어버린 괄호       | [문제](https://www.acmicpc.net/problem/1541) | [백준 1541]                                                                     |  ✔ |  |
+|  14  | 22-04-14 |  Silver 2   |       연속합        | [문제](https://www.acmicpc.net/problem/1912) | [백준 1912]                                                                                                                                                               |  ✔ |  |
+|  15  | 22-04-14 | Silver 1   |      신입사원      | [문제](https://www.acmicpc.net/problem/1946) | [백준 1946]                                                                                                                                                                |  ✔ |  |
 
 ## Tips
 
