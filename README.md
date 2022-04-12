@@ -16,9 +16,9 @@
 | 10  | 22-04-11 |  Level 3   |         정수삼각형         | [문제](https://programmers.co.kr/learn/courses/30/lessons/43105) | [정수삼각형.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/4%EC%9B%9411%EC%9D%BC/%EC%A0%95%EC%88%98%EC%82%BC%EA%B0%81%ED%98%95.py)                                                                                                                                                               | ✔ | 이호산 |
 |  11  | 22-04-14 |  Gold V  |           연구소           |           [문제](https://www.acmicpc.net/problem/14502)           | |  ✔   |      |
 |  12  | 22-04-14 |  Gold III   | 파일 합치기 | [문제](https://www.acmicpc.net/problem/11066) |                                                                                                          |  ✔ |  |
-|  13  | 22-04-14 |  Silver 3  |      잃어버린 괄호       | [문제](https://www.acmicpc.net/problem/1541) |                                                                   |  ✔ |  |
-|  14  | 22-04-14 |  Silver 2   |       연속합        | [문제](https://www.acmicpc.net/problem/1912) |                                                                                                                                                               |  ✔ |  |
-|  15  | 22-04-14 | Silver 1   |      신입사원      | [문제](https://www.acmicpc.net/problem/1946) |                                                                                                                                                                 |  ✔ |  |
+|  13  | 22-04-14 |  Silver II  |      잃어버린 괄호       | [문제](https://www.acmicpc.net/problem/1541) |                                                                   |  ✔ |  |
+|  14  | 22-04-14 |  Silver II   |       연속합        | [문제](https://www.acmicpc.net/problem/1912) |                                                                                                                                                               |  ✔ |  |
+|  15  | 22-04-14 | Silver I   |      신입사원      | [문제](https://www.acmicpc.net/problem/1946) |                                                                                                                                                                 |  ✔ |  |
 
 ## Tips
 
