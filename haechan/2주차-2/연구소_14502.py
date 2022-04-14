@@ -55,7 +55,7 @@ for i in range(n):
             virus_list.append((i, j))
 
 # 0인 좌표를 순차적으로 순회하며 3개의 벽을 세우기
-for i in range(len(zeros)): 
+for i in range(len(zeros)):
     for j in range(i): 
         for k in range(j): 
             x1, y1 = zeros[i]
