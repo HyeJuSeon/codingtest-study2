@@ -8,9 +8,8 @@ Map = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
 v = [(x, y) for x in range(N) for y in range(M) if Map[x][y] == 2]
 dq = deque(v)
 e = [(x, y) for x in range(N) for y in range(M) if Map[x][y] == 0]
-
-ans = []
 cases = list(combinations(e, 3))
+ans = []
 for case in cases:
     m = copy.deepcopy(Map)
     q = copy.deepcopy(dq)
