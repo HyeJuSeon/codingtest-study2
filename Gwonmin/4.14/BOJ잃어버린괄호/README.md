@@ -4,14 +4,13 @@
 ## 코드
 
 ```
-import sys
-#DP문제
+#+연산만 괄호로 묶어주면 된다
 
-n = int(input())
-num_list = list((map(int,sys.stdin.readline().strip().split())))
+line = input().split('-')
+result = sum(map(int,line[0].split('+')))
 
-for i in range(1,n):
-    num_list[i] = max(num_list[i],num_list[i]+num_list[i-1])
+for i in line[1:]:
+    result -= sum(map(int,i.split('+')))
 
-print(max(num_list))
+print(result)
 ```
