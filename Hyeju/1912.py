@@ -1,9 +1,8 @@
 import sys
 
 n = int(sys.stdin.readline())
-a = list(map(int, sys.stdin.readline().split()))
-d = a
+d = list(map(int, sys.stdin.readline().split()))
 for i in range(1, n):
-    if (d[i] < d[i - 1] + a[i]):
-        d[i] = d[i - 1] + a[i]
+    if (d[i] < d[i - 1] + d[i]):
+        d[i] = d[i - 1] + d[i]
 print(max(d))

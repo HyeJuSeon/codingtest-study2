@@ -5,5 +5,4 @@ def solution(n, left, right):
         b = i % n
         if a < b: a, b = b, a
         answer.append(a + 1)
-
     return answer
