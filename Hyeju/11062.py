@@ -6,7 +6,6 @@ def sol(i, j):
         return 0
     if dp[i][j]:
         return dp[i][j]
-    dp[i][j] = 0
     if i == j:
         if turn:
             return cards[i]
