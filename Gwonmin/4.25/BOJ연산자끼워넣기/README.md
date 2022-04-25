@@ -2,7 +2,8 @@
 
 ## 코드
 
-```#dfs
+```
+#dfs
 N = int(input())
 data = list(map(int, input().split()))
 add, sub, mul, div = map(int, input().split())

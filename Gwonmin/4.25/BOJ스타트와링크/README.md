@@ -2,7 +2,8 @@
 
 ## 코드
 
-```from itertools import combinations
+```
+from itertools import combinations
 #조합을 활용한 완전탐색
 
 n = int(input())
