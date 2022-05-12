@@ -6,7 +6,7 @@ def solution(maps) :
     dx = [0, 0, 1, -1]
     dy = [1, -1, 0, 0]
     endx = len(maps)-1
-    endy = len(maps[0])-1 #maps[1]이 없으면 어쩔건데...?
+    endy = len(maps[0])-1
     visited = [[0 for _ in range(endy + 1)] for _ in range(endx + 1)]
     deq = deque()
     deq.append([0,0])
