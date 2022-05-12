@@ -1,30 +1,22 @@
 import sys
 input = sys.stdin.readline
-import math
+inf = sys.maxsize
 
 N = int(input())
-
-def solution(data, size) :
-    M = [[-1] * (size+1) for _ in range (size+1)]
-    for i in range(1, size+1) :
-        M[i][i] = data[i-1]
-    for diag in range(1, size+1) :
-        for j in range(1, size - diag + 1) : #54321순으로 줄어든다
-            i = diag + j # i는 최대 size까지 늘어나야 한다. 이 방법이 바텀업 대각선 배열 표준. 기억하자.
-            M[j][i] = solve(data, M, j, i)
-    return M
-
-def solve(data, M, j, i) :
-    Min = 2000000000
-    for z in range(j, i) :
-        value = M[j][z] + M[z+1][i]
-        if Min > value:
-            Min = value
-    return Min
 
 for i in range(N) :
     size = int(input())
     data = list(map(int, input().split()))
-    result = solution(data, size)
-    print(result)
-    print(result[1][-1] + sum(data))
+    dp = [[0] * size for _ in range(size)]
+    Sum = [0]
+    for d in data :
+        Sum.append(Sum[-1] + d)
+    for d in range(1,size) :
+        for i in range(size - d) :
+            j = d + i #대각선 인덱스
+            dp[i][j] = inf
+            for k in range(i, j) :
+                dp[i][j] = min(dp[i][j], dp[i][k] + dp[k+1][j] + Sum[j+1] - Sum[i])
+    print(dp)
+    print(dp[0][size-1])
+
