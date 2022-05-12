@@ -18,6 +18,6 @@ for A_team in combinations(person, n//2): # 전체 인원의 절반으로 팀 �
         B_abil += graph[i][j]
         B_abil += graph[j][i]
 
-    result_min = min(result_min, abs(A_abil-B_abil))
+    result_min = min(result_min, abs(A_abil-B_abil)) # 차이가 최소인 값 저장
 
 print(result_min)
