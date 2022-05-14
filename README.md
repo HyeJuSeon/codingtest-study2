@@ -33,7 +33,13 @@
 | 27  | 22-05-02 |  Level 2   | 게임 맵 최단거리 | [문제](https://programmers.co.kr/learn/courses/30/lessons/1844) | []() |  ❌  |        |
 | 28  | 22-05-02 |  Level 2   | 삼각달팽이 | [문제](https://programmers.co.kr/learn/courses/30/lessons/68645) | []() |  ❌  |        |
 | 29  | 22-05-02 |  Level 3   | 합승 택시 요금 | [문제](https://programmers.co.kr/learn/courses/30/lessons/72413) | []()  |  ❌  |        |
-| 30  | 22-05-02 |  Level 3   | 양과 늑대 | [문제](https://programmers.co.kr/learn/courses/30/lessons/92343) | []() |  ❌  |        |     
+| 30  | 22-05-02 |  Level 3   | 양과 늑대 | [문제](https://programmers.co.kr/learn/courses/30/lessons/92343) | []() |  ❌  |        |   
+| 31  | 22-05-16 |  Silver III   | 배열 복원하기 | [문제](https://www.acmicpc.net/problem/16967) | []() |  ❌  |        |
+| 32  | 22-05-16 |  Silver III   | 색종이 만들기 | [문제](https://www.acmicpc.net/problem/2630) | []() |  ❌  |        |
+| 33  | 22-05-16 |  Silver I   | 1로 만들기 2 | [문제](https://www.acmicpc.net/problem/12852) | []() |  ❌  |        |
+| 34  | 22-05-16 |  Gold V   | 최단 경로 | [문제](https://www.acmicpc.net/problem/1753) | []()  |  ❌  |        |
+| 35  | 22-05-16 |  Gold V   | N-Queen | [문제](https://www.acmicpc.net/problem/9663) | []() |  ❌  |        |   
+
 ## Tips
 
 -   [**플로이드 와샬 (Floyd Warshall) 알고리즘**](https://blog.naver.com/ndb796/221234427842)
