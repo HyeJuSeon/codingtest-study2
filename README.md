@@ -29,11 +29,11 @@
 | 23  | 22-04-25 |  Silver I  | 연산자 끼워넣기 | [문제](https://www.acmicpc.net/problem/14888) | [연산자.md](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/%EC%97%B0%EC%82%B0%EC%9E%90.md) |  ✔  | 이호산 |
 | 24  | 22-04-25 |   Gold V   | 파이프 옮기기 1 | [문제](https://www.acmicpc.net/problem/17070) | [파이프옮기기](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/%ED%8C%8C%EC%9D%B4%ED%94%84%EC%98%AE%EA%B8%B0%EA%B8%B0.md) |  ✔  | 이호산 |
 | 25  | 22-04-25 |  Gold III  | 카드 게임 | [문제](https://www.acmicpc.net/problem/11062) | [카드게임](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/%EC%B9%B4%EB%93%9C%EA%B2%8C%EC%9E%84.md) |  ✔  | 이호산 |
-| 26  | 22-05-02 |  Level 2   | 수식최대화 | [문제](https://programmers.co.kr/learn/courses/30/lessons/67257) | []() |  ❌  |        |
-| 27  | 22-05-02 |  Level 2   | 게임 맵 최단거리 | [문제](https://programmers.co.kr/learn/courses/30/lessons/1844) | []() |  ❌  |        |
-| 28  | 22-05-02 |  Level 2   | 삼각달팽이 | [문제](https://programmers.co.kr/learn/courses/30/lessons/68645) | []() |  ❌  |        |
-| 29  | 22-05-02 |  Level 3   | 합승 택시 요금 | [문제](https://programmers.co.kr/learn/courses/30/lessons/72413) | []()  |  ❌  |        |
-| 30  | 22-05-02 |  Level 3   | 양과 늑대 | [문제](https://programmers.co.kr/learn/courses/30/lessons/92343) | []() |  ❌  |        |   
+| 26  | 22-05-02 |  Level 2   | 수식최대화 | [문제](https://programmers.co.kr/learn/courses/30/lessons/67257) | [수식 최대화.py](https://github.com/kimeunh3/codingtest-study2/blob/main/SeoYoung/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/%EC%88%98%EC%8B%9D%20%EC%B5%9C%EB%8C%80%ED%99%94/%EC%88%98%EC%8B%9D%20%EC%B5%9C%EB%8C%80%ED%99%94.py) |  ✔  | 배서영 |
+| 27  | 22-05-02 |  Level 2   | 게임 맵 최단거리 | [문제](https://programmers.co.kr/learn/courses/30/lessons/1844) | [게임맵최단거리.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hyeju/%EA%B2%8C%EC%9E%84%EB%A7%B5%EC%B5%9C%EB%8B%A8%EA%B1%B0%EB%A6%AC.py) |  ✔  | 선혜주 |
+| 28  | 22-05-02 |  Level 2   | 삼각달팽이 | [문제](https://programmers.co.kr/learn/courses/30/lessons/68645) | [.삼각달팽이.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/5%EC%9B%942%EC%9D%BC/.%EC%82%BC%EA%B0%81%EB%8B%AC%ED%8C%BD%EC%9D%B4.py) |  ✔  | 이호산 |
+| 29  | 22-05-02 |  Level 3   | 합승 택시 요금 | [문제](https://programmers.co.kr/learn/courses/30/lessons/72413) | [PRGRMRS_72413_합승_택시_요금](https://github.com/kimeunh3/codingtest-study2/tree/main/Eunhye/DAY06/PRGRMRS_72413_%ED%95%A9%EC%8A%B9_%ED%83%9D%EC%8B%9C_%EC%9A%94%EA%B8%88)  |  ✔  | 김은혜 |
+| 30  | 22-05-02 |  Level 3   | 양과 늑대 | [문제](https://programmers.co.kr/learn/courses/30/lessons/92343) | [양과늑대.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/%EA%B0%9C%EC%9D%B8%EC%97%B0%EC%8A%B5/%EC%96%91%EA%B3%BC%EB%8A%91%EB%8C%80.py) |  ✔  | 이호산 |   
 | 31  | 22-05-16 |  Silver III   | 배열 복원하기 | [문제](https://www.acmicpc.net/problem/16967) | []() |  ❌  |        |
 | 32  | 22-05-16 |  Silver III   | 색종이 만들기 | [문제](https://www.acmicpc.net/problem/2630) | []() |  ❌  |        |
 | 33  | 22-05-16 |  Silver I   | 1로 만들기 2 | [문제](https://www.acmicpc.net/problem/12852) | []() |  ❌  |        |
