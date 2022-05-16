@@ -25,7 +25,6 @@ def bfs(maps, n, m):
             nx = x + mx[i]
             ny = y + my[i]
             
-            
             if nx < 0 or ny < 0 or nx > n or ny > m:
                 continue
             if maps[nx][ny] == 0:
