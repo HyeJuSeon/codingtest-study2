@@ -34,11 +34,16 @@
 | 28  | 22-05-02 |  Level 2   | 삼각달팽이 | [문제](https://programmers.co.kr/learn/courses/30/lessons/68645) | [.삼각달팽이.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/5%EC%9B%942%EC%9D%BC/.%EC%82%BC%EA%B0%81%EB%8B%AC%ED%8C%BD%EC%9D%B4.py) |  ✔  | 이호산 |
 | 29  | 22-05-02 |  Level 3   | 합승 택시 요금 | [문제](https://programmers.co.kr/learn/courses/30/lessons/72413) | [PRGRMRS_72413_합승_택시_요금](https://github.com/kimeunh3/codingtest-study2/tree/main/Eunhye/DAY06/PRGRMRS_72413_%ED%95%A9%EC%8A%B9_%ED%83%9D%EC%8B%9C_%EC%9A%94%EA%B8%88)  |  ✔  | 김은혜 |
 | 30  | 22-05-02 |  Level 3   | 양과 늑대 | [문제](https://programmers.co.kr/learn/courses/30/lessons/92343) | [양과늑대.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hosan/%EA%B0%9C%EC%9D%B8%EC%97%B0%EC%8A%B5/%EC%96%91%EA%B3%BC%EB%8A%91%EB%8C%80.py) |  ✔  | 이호산 |   
-| 31  | 22-05-16 |  Silver III   | 배열 복원하기 | [문제](https://www.acmicpc.net/problem/16967) | []() |  ❌  |        |
-| 32  | 22-05-16 |  Silver III   | 색종이 만들기 | [문제](https://www.acmicpc.net/problem/2630) | []() |  ❌  |        |
-| 33  | 22-05-16 |  Silver I   | 1로 만들기 2 | [문제](https://www.acmicpc.net/problem/12852) | []() |  ❌  |        |
-| 34  | 22-05-16 |  Gold V   | 최단 경로 | [문제](https://www.acmicpc.net/problem/1753) | []()  |  ❌  |        |
-| 35  | 22-05-16 |  Gold V   | N-Queen | [문제](https://www.acmicpc.net/problem/9663) | []() |  ❌  |        |   
+| 31  | 22-05-16 |  Silver III   | 배열 복원하기 | [문제](https://www.acmicpc.net/problem/16967) | [16967.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hyeju/16967.py) |  ✔  | 선혜주 |
+| 32  | 22-05-16 |  Silver III   | 색종이 만들기 | [문제](https://www.acmicpc.net/problem/2630) | [BOJ_2630_색종이_만들기](https://github.com/kimeunh3/codingtest-study2/tree/main/Eunhye/DAY07/BOJ_2630_%EC%83%89%EC%A2%85%EC%9D%B4_%EB%A7%8C%EB%93%A4%EA%B8%B0) |  ✔  | 김은혜 |
+| 33  | 22-05-16 |  Silver I   | 1로 만들기 2 | [문제](https://www.acmicpc.net/problem/12852) | [12852.py](https://github.com/kimeunh3/codingtest-study2/blob/main/SeoYoung/%EB%B0%B1%EC%A4%80/1%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B02%E2%9C%85/12852.py) |  ✔  | 배서영 |
+| 34  | 22-05-16 |  Gold V   | 최단 경로 | [문제](https://www.acmicpc.net/problem/1753) | [BOJ_1753_최단경로](https://github.com/kimeunh3/codingtest-study2/tree/main/Eunhye/DAY07/BOJ_1753_%EC%B5%9C%EB%8B%A8%EA%B2%BD%EB%A1%9C)  |  ✔  | 김은혜 |
+| 35  | 22-05-16 |  Gold V   | N-Queen | [문제](https://www.acmicpc.net/problem/9663) | [9663.py](https://github.com/kimeunh3/codingtest-study2/blob/main/Hyeju/9663.py) |  ✔  | 선혜주 |   
+| 36  | 22-05-19 |  Level 2   | 124 나라의 숫자 | [문제](https://programmers.co.kr/learn/courses/30/lessons/12899) | []() |  ❌  |        |
+| 37  | 22-05-19 |  Level 2   | 더 맵게 | [문제](https://programmers.co.kr/learn/courses/30/lessons/42626) | []() |  ❌  |        |
+| 38  | 22-05-19 |  Level 2   | 프린터 | [문제](https://programmers.co.kr/learn/courses/30/lessons/42587) | []() |  ❌  |        |
+| 39  | 22-05-19 |  Level 3   | 보석 쇼핑 | [문제](https://programmers.co.kr/learn/courses/30/lessons/67258) | []()  |  ❌  |        |
+| 40  | 22-05-19 |  Level 3   | 등굣길 | [문제](https://programmers.co.kr/learn/courses/30/lessons/42898) | []() |  ❌  |        |   
 
 ## Tips
 
