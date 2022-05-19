@@ -17,7 +17,7 @@ def solution(n):
             x = nx
             y = ny
         else:
-            d = (d+1) % 3 # 방향 전환
+            d = (d+1) % 3 # 조건에 막힐때마다 d+1을 통해 방향 전환
             x += dx[d]
             y += dy[d]
     

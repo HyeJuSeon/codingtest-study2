@@ -36,7 +36,7 @@ def solution(expression):
     answer = 0
     priorities = get_priorities(expression,)
     for priority in priorities:
-        res = int(calc(priority, 0, expression))
+        res = int(calc(priority, 0, expression)) # 반대로 뒤집힌 경우도 들어가 있으니까 인덱스 0부터
         answer = max(answer, abs(res))
 
     return answer
