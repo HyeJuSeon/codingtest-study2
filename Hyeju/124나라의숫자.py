@@ -1,7 +1,7 @@
 def solution(n):
     arr = ['1', '2', '4']
     ans = ''
-    while n > 0:
+    while n:
         n -= 1
         div, mod = divmod(n, 3)
         ans = arr[mod] + ans
