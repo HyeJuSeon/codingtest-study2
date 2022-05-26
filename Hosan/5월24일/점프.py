@@ -24,7 +24,7 @@ for i in range(1, N+1) :
     tmp = list(map(int, input().split()))
     for j in range(1, N+1) :
         field[i][j] = tmp[j-1]
-count[1][1] = 1
+count[1][1] = 1 #기저조건
 for i in range(1, N+1) :
     for j in range(1, N+1) :
         tmp = field[i][j]
