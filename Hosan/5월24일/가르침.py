@@ -5,6 +5,7 @@ input = sys.stdin.readline
 
 N, K = map(int, input().split())
 K = K - 5
+abc = set(['a', 'c', 'n', 't', 'i'])
 alphabet_list = list(set(list(ascii_lowercase)) - set(['a', 'c', 'n', 't', 'i']))
 word_list = []
 for i in range(N) :
@@ -14,9 +15,10 @@ for i in range(N) :
 count = 0
 if K < 0 :
     print(0)
+
 else :
     for alphabet in combinations(alphabet_list, K) :
-        alphabet = list(set(alphabet) | set(['a', 'c', 'n', 't', 'i']))
+        alphabet = list(set(alphabet) | abc)
         tmp_count = 0
         for i in range(N) :
             flag = True
