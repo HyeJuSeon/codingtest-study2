@@ -1,12 +1,27 @@
 ## 풀이
 
+동적계획법을 더해준 BFS로 풀어주었습니다.  
+
+여기서 cache는 다음과 같습니다.  
+```
+cache[i] = 1번 마을에서 i번 마을로 가는 최소 시간
+```
+
+최소시간을 찾는 문제이기 때문에 cache를 모두 float("inf")로 초기화해준 뒤 1번 마을로 가는 경우는 0으로 지정해줍니다.  
+
+queue에 추가해주는 노드는 (현재 위치, 걸린 시간)으로 항상 처음은 1번마을에서 출발하니 (1, 0)을 queue에 넣어줍니다.  
+
+popleft를 해주며 현재 위치와 연결되어 있는 길을 찾고 길의 시간을 total에 더해준 new_total이 현재 cache에 저장되어 있는 해당 마을까지 가는 최소거리보다 적다면 해당 마을의 cache를 update 해줍니다. 또한 해당 마을을 거쳐, 다른 마을을 가는 경우의 수도 고려해주기 위해, 해당 마을 번호와 new_total을 queue에 append해줍니다.  
+
+끝까지 모든 경우의 수를 확인해준 뒤 cache에서 K의 보다 작은 수의 개수를 구해 return해줍니다.  
+
 ## 코드
 
 ```python
 from collections import deque
 def solution(N, road, K):
     cache = [ float("inf") for _ in range(N+1)]
-    cache[1] = 1
+    cache[1] = 0
     queue = deque([(1, 0)])
     while queue:
         curr, total = queue.popleft()
