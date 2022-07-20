@@ -1,5 +1,13 @@
 ## 풀이
 
+Counter 모듈을 이용하여 구현해주었습니다.
+
+set을 이용하여 교집합(intersection) 또는 합집합(union)을 구해줄 수 도 있지만, set은 중복을 제거하기 때문에 이 문제와는 맞지 않았습니다.
+
+각각의 단어의 두 글자가 알파벳인지 확인해준 뒤 대문자로 변환해준 뒤 list에 넣어주었습니다.
+
+각각의 단어의 list를 Counter로 바꿔준 뒤, intersection('&'), union('\|')을 해준 Counter의 element 개수를 저장해주었습니다. 문제에서 지시한대로 intersection에 65536을 곱한 값을 union으로 나눠주었습니다.
+
 ## 코드
 
 ```python
@@ -18,6 +26,5 @@ def solution(str1, str2):
     cnt2 = Counter(s2)
     intersection = len(list((cnt1 & cnt2).elements()))
     union = len(list((cnt1 | cnt2).elements()))
-
     return 65536*intersection // union if union else 65536
 ```
